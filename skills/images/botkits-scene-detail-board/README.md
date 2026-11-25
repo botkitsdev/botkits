@@ -37,7 +37,7 @@ The photo sits on top. Below it, on off-white paper, a short title sits over 6 i
 
 ## Use it in
 
-- Used daily: Grok Bot.
+- Built and tested in Grok Bot. Not in daily use yet.
 - Installs with `npx skills add` (tested 18 Nov 2026): Claude Code, Codex, Cursor, Gemini CLI, GitHub Copilot and Grok Build.
 - Supports the SKILL.md format (vendor docs): Claude apps (upload), ChatGPT (Business, Enterprise, Edu, Healthcare upload), and the other clients listed at [agentskills.io](https://agentskills.io/clients).
 - Other agents that support the Agent Skills format can load it. We have not run it there.
