@@ -189,6 +189,7 @@ updates. Show the evidence. Propose changes before applying them.
 | --- | --- |
 | [botkits-engineering-playbook](skills/engineering/botkits-engineering-playbook/) | Delegate coding work to cloud agents and review the results. |
 | [botkits-show-me](skills/engineering/botkits-show-me/) | Explain code changes with visual PR descriptions. |
+| [botkits-system-design-explorer](skills/engineering/botkits-system-design-explorer/) | Explain a system design on one keyboard-driven HTML page: decisions, an animated diagram, an event demo, a layer stack, walkthroughs, and a sheet for every box. |
 
 ### SEO
 
@@ -298,6 +299,7 @@ The instructions are plain Markdown. Some workflows need more than a chat window
 - `botkits-motion-picker` needs no package of its own. It chooses a library and a timing preset. The same media rule applies: captures stay out of git.
 - `botkits-youtube-niche-report` runs Python scripts with yt-dlp, ffmpeg and Pillow on a machine that can reach YouTube.
 - `botkits-shorts-reframe` needs ffmpeg and ffprobe on the machine that holds the source video.
+- `botkits-system-design-explorer` writes one static HTML file. Its review step uses a headless browser (Playwright) for screenshots when one is available.
 - `botkits-video-plan-page` runs one Python 3 script. Pillow is optional (it shrinks embedded images); the tests' browser check needs Playwright and skips without it.
 - The image playbook needs browser control and a signed-in ChatGPT session with image generation available.
 - Search, publishing, and design tasks need the relevant browser, connector, or project access.
@@ -342,6 +344,7 @@ Each skill here is written from scratch in our own words, drawing on several ref
 - **botkits-exact-match-intent-seo:** started from [Hridoy Reh's X post](https://x.com/hridoyreh/status/2096534436934455606), not reverified.
 - **botkits-markdown-twin:** inspired by [Jeremy Howard / llmstxt.org](https://llmstxt.org/): the /llms.txt v2 proposal.
 - **botkits-shorts-reframe:** inspired by [FFmpeg crop filter documentation](https://ffmpeg.org/ffmpeg-filters.html#crop) and the [mediacodec.dev crop guide](https://mediacodec.dev/how-to/crop-video/).
+- **botkits-system-design-explorer:** Dani's own system design explorer (private), rewritten as a standalone skill with a made-up example system. Also draws on [Ben Shneiderman's "The Eyes Have It"](https://doi.org/10.1109/VL.1996.545307) and the [C4 model's notation guide](https://c4model.com/diagrams/notation).
 - **botkits-video-plan-page:** Dani's own storytelling-video plan page (private channel repo, PR #204), rewritten as a standalone skill.
 - **botkits-x-article, botkits-chatgpt-images-browser-playbook:** Dani's own workflows; no outside source verified.
 
