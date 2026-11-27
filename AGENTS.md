@@ -104,6 +104,7 @@ Or copy one skill folder by hand. Copy the skill folder itself (`skills/<categor
 - End the skill (or its README) with an `## Inspired by` section that names and links each source.
 - Add the source to `docs/credits.md`. If its license needs a notice, add it to `THIRD_PARTY_NOTICES.md`.
 - Do not copy from sources that have no reuse license, such as marketplace templates.
+- Exception (Dani rule, Nov 2026): when a skill only takes an idea from someone's social post (no text, code or images reused), make it our own: a new name, our own structure, defaults and wording. Do not name or link the post or its author anywhere, with no `## Inspired by` section and no `docs/credits.md` row.
 
 ## Git and pull requests
 

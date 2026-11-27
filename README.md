@@ -236,6 +236,7 @@ updates. Show the evidence. Propose changes before applying them.
 | Skill | What it does |
 | --- | --- |
 | [botkits-chatgpt-images-browser-playbook](skills/images/botkits-chatgpt-images-browser-playbook/) | Generate still images through a signed-in ChatGPT browser session. |
+| [botkits-scene-detail-board](skills/images/botkits-scene-detail-board/) | Pair a photo with a grid of hand sketches of its details, in one portrait image. |
 
 ## Renamed skills
 

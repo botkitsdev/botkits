@@ -88,6 +88,7 @@ Outline all type to paths in SVGs. No `<text>` in shipped SVGs.
 | Asset | 1× | 2× |
 |---|---|---|
 | `logo-wide.png`, `header-dark.png` | 1280×320 | 2560×640 |
+| Skill headers `header-botkits-<name>-light.png` and `-dark.png` | 1280×320 | 2560×640 |
 | `mark-512.png` | 512×512 | none (`mark-1024.png` is 1024×1024) |
 | GitHub avatar | 40×40 circle | none |
 | Top-3 cards | 800×460 | 1600×920 |
@@ -97,13 +98,16 @@ Match these sizes when you replace a repo file.
 
 ## Alt text
 
-Write a short, factual description of what the image shows. Name the skill and any number that is in the picture. Do not start with "image of". Example: `aeo-geo-site: botkits.dev is-agentic score, 79 to 81 to 100, is-agentic.com, 17 Nov 2026`.
+Write a short, factual description of what the image shows. Name the skill and any number that is in the picture. Do not start with "image of". Example: `botkits-aeo-geo-site: botkits.dev is-agentic score, 79 to 81 to 100, is-agentic.com, 17 Nov 2026`.
 
 ## File names
 
 - Logo: `mark-512.png`, `mark-1024.png`, `mark.svg`, `logo-wide.png`, `logo-wide@2x.png`, `header-dark.png`, `header-dark@2x.png`, plus `@2x` and `.svg` where they exist.
 - Cards: `top3-{skill}-light.png`, `top3-{skill}-dark.png`, and `@2x`. Drop-in repo copies use the unsuffixed names (`top3-shorts-reframe.png`, `top3-x-article.png`, `top3-aeo-geo-site.png`) and are the light artwork.
 - Demo: `demo.gif`.
+- Skill headers: `assets/skills/header-botkits-<name>-light.png`, `-light@2x.png`, `-dark.png` and `-dark@2x.png`. They are 1280×320 and 2560×640. Make them with Designer's skill header generator. Commit only these 4 PNGs, not the SVGs.
+- Skill headers live in the shared `assets/skills/` folder, not in the skill folder. The 4 lite skill folders may hold only `SKILL.md` and `README.md` (see the paid-guard check), so one shared folder keeps every skill the same.
+- A skill README starts with its header, above the `#` title. Use a `<picture>` with the dark pair as the `prefers-color-scheme: dark` source and the light pair as the `<img>`, width 800. Alt text: `BotKits botkits-<name> skill header`.
 - Put drop-in files in `assets/` with those exact repo names so the README needs no edits.
 
 ## Before you ship an image
@@ -120,3 +124,26 @@ Write a short, factual description of what the image shows. Name the skill and a
 ## README section order
 
 DESIGN.md has no README template. For the section order of a skill README, follow [BRAND.md](BRAND.md) section 8.
+
+## Premium
+
+Premium is the paid kits section of botkits.dev (`/premium`) and its banner on the open source home page. Open source pages keep the tokens above. Source: Designer's Premium style spec, 19 Nov 2026.
+
+Premium pages are always dark. They ignore the light and dark toggle.
+
+| Token | Value | Use |
+| --- | --- | --- |
+| bg | `#0B0D10` | Page |
+| surface | `#14171C` | Cards, panels, code blocks |
+| rule | `#262A31` | Dividers and 1 px card borders |
+| text | `#F2EFE7` | Body and headlines |
+| muted | `#A39E93` | Secondary text |
+| blue | `#a3b4ff` | Links in body text only |
+| gold | `#E2B85C` | The Premium contrast colour |
+
+- Gold is the only contrast colour. Use `#E2B85C` on dark. Use `#8A5F0E` only if gold type must sit on a light page.
+- Use gold for the "Premium" label, prices, one primary button per card (button text `#0B0D10`), the active nav item, and a 1 px top hairline on cards. Never in body text, and never as a large fill or gradient.
+- No orange `#F2762E` and no lime on Premium. Gold replaces the spark there.
+- The logo stays "BotKits" with the existing dark asset. Never make it gold.
+- No prices or Gumroad links on the home page, except one slim dark Premium strip above the hero that links to `/premium`.
+- The strip is 44 px high on desktop and 52 px on mobile. It is full width, not sticky, and the reader can close it. Light mode: bg `#0B0D10`, text `#F2EFE7`. Dark mode: bg `#14171C` with a 1 px `#262A31` bottom border. It holds a gold "PREMIUM" label, one line of text, and a gold "See Premium" link. No icons and no animation.
