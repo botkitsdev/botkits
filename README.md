@@ -9,13 +9,13 @@
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/github/license/botkitsdev/botkits?labelColor=14181B&color=2340C4" alt="MIT license"></a>
   <a href="https://github.com/botkitsdev/botkits/stargazers"><img src="https://img.shields.io/github/stars/botkitsdev/botkits?style=flat&labelColor=14181B&color=F6F7F3" alt="GitHub stars"></a>
-  <a href="#all-skills"><img src="https://img.shields.io/badge/skills-33-F6F7F3?labelColor=14181B" alt="33 skills"></a>
+  <a href="#all-skills"><img src="https://img.shields.io/badge/skills-34-F6F7F3?labelColor=14181B" alt="34 skills"></a>
   <a href="https://botkits.dev"><img src="https://img.shields.io/badge/botkits.dev-2340C4?labelColor=14181B&color=2340C4" alt="botkits.dev"></a>
 </p>
 
 # Skills your bots can run today
 
-Open SKILL.md folders for Claude, ChatGPT, Codex, Cursor, Gemini, Copilot and Grok Bot. 33 skills, used daily by my own Grok Bots. MIT.
+Open SKILL.md folders for Claude, ChatGPT, Codex, Cursor, Gemini, Copilot and Grok Bot. 34 skills, used daily by my own Grok Bots. MIT.
 
 <p align="center">
   <a href="https://botkits.dev">Browse on botkits.dev</a>
@@ -33,7 +33,7 @@ Install guides and skill pages: [botkits.dev](https://botkits.dev)
   <img src="assets/demo.gif" alt="Terminal demo: npx skills add botkitsdev/botkits, then a bot loads botkits-no-ai-slop/SKILL.md when the task matches." width="800">
 </p>
 
-[Top 3](#top-3) · [Quick start](#quick-start) · [Use it in](#use-it-in) · [Start here](#start-here) · [All 33 skills](#all-skills) · [Renamed skills](#renamed-skills) · [How a skill is used](#how-a-skill-is-used) · [Tool requirements](#tool-requirements) · [Premium](#premium) · [Contribute](#contribute) · [Inspired by](#inspired-by) · [License](#license)
+[Top 3](#top-3) · [Quick start](#quick-start) · [Use it in](#use-it-in) · [Start here](#start-here) · [All 34 skills](#all-skills) · [Renamed skills](#renamed-skills) · [How a skill is used](#how-a-skill-is-used) · [Tool requirements](#tool-requirements) · [Premium](#premium) · [Contribute](#contribute) · [Inspired by](#inspired-by) · [License](#license)
 
 ## Top 3
 
@@ -67,7 +67,7 @@ npx skills add botkitsdev/botkits
 
 To install one skill, add `--skill` and its folder name, for example `npx skills add botkitsdev/botkits --skill botkits-no-ai-slop`. Run `npx skills add botkitsdev/botkits --list` to see them all.
 
-For all 33 skills, download the [ZIP](https://github.com/botkitsdev/botkits/archive/refs/heads/main.zip), or clone the repo:
+For all 34 skills, download the [ZIP](https://github.com/botkitsdev/botkits/archive/refs/heads/main.zip), or clone the repo:
 
 ```sh
 git clone https://github.com/botkitsdev/botkits.git
@@ -83,7 +83,7 @@ Free skills I use daily to run my 3 YouTube channels. My bots run on Grok Bot. T
 
 Made by Dani Acosta. Follow on X: [@DaniAcostaAI](https://x.com/DaniAcostaAI)
 
-33 skills for writing, design, code, SEO, ads, YouTube research, video, images, and bot routines. Give your bot a clear process for the job you need done.
+34 skills for writing, design, code, SEO, ads, YouTube research, video, images, and bot routines. Give your bot a clear process for the job you need done.
 
 Every skill is Dani's own version, inspired by several public references rather than copied from one. Each is a single readable `SKILL.md`. The rewritten skills end with what inspired them, what those references were missing, and what this version adds.
 
@@ -215,6 +215,7 @@ updates. Show the evidence. Propose changes before applying them.
 | Skill | What it does |
 | --- | --- |
 | [botkits-youtube-niche-report](skills/youtube/botkits-youtube-niche-report/) | Pull a niche's top videos, score them against their own channel, and build an interactive HTML report of what wins. Ships with an example config for a made-up niche. |
+| [botkits-youtube-channel-analysis](skills/youtube/botkits-youtube-channel-analysis/) | Analyse one channel from public data: outliers against its own median, cadence, packaging, Shorts versus long-form, a search or browse lane guess, a rough RPM band, and 3 to 5 ideas. |
 
 ### Video
 
@@ -301,6 +302,7 @@ The instructions are plain Markdown. Some workflows need more than a chat window
 - `botkits-diagram-design` runs on its own. If [Cathryn Lavery's diagram pack](https://github.com/cathrynlavery/diagram-design) is installed, it uses that pack's type references too. Its optional line-draw clip needs a headless browser only if you record webm or mp4. Do not commit gif, mp4, webm, or rendered png files.
 - `botkits-motion-picker` needs no package of its own. It chooses a library and a timing preset. The same media rule applies: captures stay out of git.
 - `botkits-youtube-niche-report` runs Python scripts with yt-dlp, ffmpeg and Pillow on a machine that can reach YouTube.
+- `botkits-youtube-channel-analysis` runs one Python script with yt-dlp on a machine that can reach YouTube. Pillow is optional (thumbnail sheet).
 - `botkits-shorts-reframe` needs ffmpeg and ffprobe on the machine that holds the source video.
 - `botkits-system-design-explorer` writes one static HTML file. Its review step uses a headless browser (Playwright) for screenshots when one is available.
 - `botkits-video-plan-page` runs one Python 3 script. Pillow is optional (it shrinks embedded images); the tests' browser check needs Playwright and skips without it.
@@ -348,6 +350,7 @@ Each skill here is written from scratch in our own words, drawing on several ref
 - **botkits-markdown-twin:** inspired by [Jeremy Howard / llmstxt.org](https://llmstxt.org/): the /llms.txt v2 proposal.
 - **botkits-shorts-reframe:** inspired by [FFmpeg crop filter documentation](https://ffmpeg.org/ffmpeg-filters.html#crop) and the [mediacodec.dev crop guide](https://mediacodec.dev/how-to/crop-video/).
 - **botkits-system-design-explorer:** Dani's own system design explorer (private), rewritten as a standalone skill with a made-up example system. Also draws on [Ben Shneiderman's "The Eyes Have It"](https://doi.org/10.1109/VL.1996.545307) and the [C4 model's notation guide](https://c4model.com/diagrams/notation).
+- **botkits-youtube-channel-analysis:** inspired by [1of10's competitor guide](https://1of10.com/blog/find-youtube-competitors/), [Bomx's outlier playbook](https://github.com/Bomx/viral-agent-1of10/blob/main/OUTLIER_PLAYBOOK.md), two YouTube Help pages on [CTR and impressions](https://support.google.com/youtube/answer/16767369) and [video reach](https://support.google.com/youtubecreatorstudio/answer/9314355), [ReachMath's RPM by niche](https://reachmath.com/data/youtube-rpm-by-niche/), [Autonolab's packaging guide](https://blog.autonolab.com/blog/2025-07-06-the-packaging-doctrine-thumbnail-title-systems-used-by-viral-operators/), the [YouTube Data API quota table](https://developers.google.com/youtube/data/determine_quota_cost) and [ViewStats' Competitors tool](https://viewstats.zendesk.com/hc/en-us/articles/28242057319707-Competitors-Tool), all read on 28 Nov 2026.
 - **botkits-video-plan-page:** Dani's own storytelling-video plan page (private channel repo, PR #204), rewritten as a standalone skill.
 - **botkits-x-article, botkits-chatgpt-images-browser-playbook:** Dani's own workflows; no outside source verified.
 
