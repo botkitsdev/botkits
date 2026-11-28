@@ -9,13 +9,13 @@
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/github/license/botkitsdev/botkits?labelColor=14181B&color=2340C4" alt="MIT license"></a>
   <a href="https://github.com/botkitsdev/botkits/stargazers"><img src="https://img.shields.io/github/stars/botkitsdev/botkits?style=flat&labelColor=14181B&color=F6F7F3" alt="GitHub stars"></a>
-  <a href="#all-skills"><img src="https://img.shields.io/badge/skills-36-F6F7F3?labelColor=14181B" alt="36 skills"></a>
+  <a href="#all-skills"><img src="https://img.shields.io/badge/skills-39-F6F7F3?labelColor=14181B" alt="39 skills"></a>
   <a href="https://botkits.dev"><img src="https://img.shields.io/badge/botkits.dev-2340C4?labelColor=14181B&color=2340C4" alt="botkits.dev"></a>
 </p>
 
 # Skills your bots can run today
 
-Open SKILL.md folders for Claude, ChatGPT, Codex, Cursor, Gemini, Copilot and Grok Bot. 36 skills, used daily by my own Grok Bots. MIT.
+Open SKILL.md folders for Claude, ChatGPT, Codex, Cursor, Gemini, Copilot and Grok Bot. 39 skills, used daily by my own Grok Bots. MIT.
 
 <p align="center">
   <a href="https://botkits.dev">Browse on botkits.dev</a>
@@ -33,7 +33,7 @@ Install guides and skill pages: [botkits.dev](https://botkits.dev)
   <img src="assets/demo.gif" alt="Terminal demo: npx skills add botkitsdev/botkits, then a bot loads botkits-no-ai-slop/SKILL.md when the task matches." width="800">
 </p>
 
-[Top 3](#top-3) · [Quick start](#quick-start) · [Use it in](#use-it-in) · [Start here](#start-here) · [All 36 skills](#all-skills) · [Renamed skills](#renamed-skills) · [How a skill is used](#how-a-skill-is-used) · [Tool requirements](#tool-requirements) · [Premium](#premium) · [Contribute](#contribute) · [Inspired by](#inspired-by) · [License](#license)
+[Top 3](#top-3) · [Quick start](#quick-start) · [Use it in](#use-it-in) · [Start here](#start-here) · [All 39 skills](#all-skills) · [Bots](#bots) · [Renamed skills](#renamed-skills) · [How a skill is used](#how-a-skill-is-used) · [Tool requirements](#tool-requirements) · [Premium](#premium) · [Contribute](#contribute) · [Inspired by](#inspired-by) · [License](#license)
 
 ## Top 3
 
@@ -67,7 +67,7 @@ npx skills add botkitsdev/botkits
 
 To install one skill, add `--skill` and its folder name, for example `npx skills add botkitsdev/botkits --skill botkits-no-ai-slop`. Run `npx skills add botkitsdev/botkits --list` to see them all.
 
-For all 36 skills, download the [ZIP](https://github.com/botkitsdev/botkits/archive/refs/heads/main.zip), or clone the repo:
+For all 39 skills, download the [ZIP](https://github.com/botkitsdev/botkits/archive/refs/heads/main.zip), or clone the repo:
 
 ```sh
 git clone https://github.com/botkitsdev/botkits.git
@@ -83,7 +83,7 @@ Free skills I use daily to run my 3 YouTube channels. My bots run on Grok Bot. T
 
 Made by Dani Acosta. Follow on X: [@DaniAcostaAI](https://x.com/DaniAcostaAI)
 
-36 skills for writing, design, code, SEO, ads, YouTube research, video, images, and bot routines. Give your bot a clear process for the job you need done.
+39 skills and 1 bot pack, for writing, design, code, MCP servers, SEO, ads, YouTube research, video, images, and bot routines. Give your bot a clear process for the job you need done.
 
 Every skill is Dani's own version, inspired by several public references rather than copied from one. Each is a single readable `SKILL.md`. The rewritten skills end with what inspired them, what those references were missing, and what this version adds.
 
@@ -117,6 +117,7 @@ Some bot and engineering skills use Grok Bot tools. As written, they need Grok B
 | Remove AI filler from a draft | [botkits-no-ai-slop](skills/writing/botkits-no-ai-slop/) |
 | Improve a website's design | [botkits-redesign-existing-projects](skills/design/botkits-redesign-existing-projects/) |
 | Create a bot with one clear job | [botkits-design-a-grok-bot](skills/bots/botkits-design-a-grok-bot/) |
+| Set up a bot that reviews agent tools, event wakes and skill upgrades | [botkits-agent-tooling-coach](bots/botkits-agent-tooling-coach/) |
 | Find noisy or wasteful routines | [botkits-routine-healthcheck](skills/bots/botkits-routine-healthcheck/) |
 | Write a post for X or LinkedIn | [botkits-social-copywriting](skills/writing/botkits-social-copywriting/) |
 | Write a storytelling hook | [botkits-storytelling-hooks](skills/writing/botkits-storytelling-hooks/) |
@@ -193,6 +194,7 @@ updates. Show the evidence. Propose changes before applying them.
 | [botkits-engineering-playbook](skills/engineering/botkits-engineering-playbook/) | Delegate coding work to cloud agents and review the results. |
 | [botkits-show-me](skills/engineering/botkits-show-me/) | Explain code changes with visual PR descriptions. |
 | [botkits-system-design-explorer](skills/engineering/botkits-system-design-explorer/) | Explain a system design on one keyboard-driven HTML page: decisions, an animated diagram, an event demo, a layer stack, walkthroughs, and a sheet for every box. |
+| [botkits-mcp-tool-surface-review](skills/engineering/botkits-mcp-tool-surface-review/) | Review an MCP server's tool list against a fixed check list and rewrite the two worst tools. |
 
 ### SEO
 
@@ -235,6 +237,8 @@ updates. Show the evidence. Propose changes before applying them.
 | [botkits-transcript-healthcheck](skills/bots/botkits-transcript-healthcheck/) | Find repeated friction in bot transcripts. |
 | [botkits-overheard](skills/bots/botkits-overheard/) | Compile a digest of third-party mentions. |
 | [botkits-overheard-setup](skills/bots/botkits-overheard-setup/) | Set up a mention watch list, sources, and schedule. |
+| [botkits-event-wake-plan](skills/bots/botkits-event-wake-plan/) | Plan an agent that wakes on events: duplicate rule, event text as data, human taps for risky actions, and a hostile test event. |
+| [botkits-skill-upgrade-check](skills/bots/botkits-skill-upgrade-check/) | Pin a skill, run 5 test tasks before and after a change, and get a keep or hold verdict. |
 
 ### Images
 
@@ -242,6 +246,14 @@ updates. Show the evidence. Propose changes before applying them.
 | --- | --- |
 | [botkits-chatgpt-images-browser-playbook](skills/images/botkits-chatgpt-images-browser-playbook/) | Generate still images through a signed-in ChatGPT browser session. |
 | [botkits-scene-detail-board](skills/images/botkits-scene-detail-board/) | Pair a photo with a grid of hand sketches of its details, in one portrait image. |
+
+## Bots
+
+A bot is a pack: a persona, the skills it uses, optional routines, and a short getting-started chat. Load [PACK.md](bots/botkits-agent-tooling-coach/PACK.md), then install the skills it lists. The format is in [AGENTS.md](AGENTS.md#bot-packs).
+
+| Bot | What it does |
+| --- | --- |
+| [botkits-agent-tooling-coach](bots/botkits-agent-tooling-coach/) | Review an agent's tools, plan how it wakes on events, and check a skill or model change before it goes live. It does not turn anything on. |
 
 ## Renamed skills
 
@@ -328,7 +340,7 @@ Every skill above is free and complete. A Premium kit is the tested, ready-to-ru
 
 Found a useful improvement? Open an [issue](https://github.com/botkitsdev/botkits/issues) or a pull request.
 
-Keep each skill focused on one job. Use `skills/<category>/<slug>/SKILL.md` with `name` and `description` in YAML frontmatter. Include an example task and any tool requirements in your pull request. Add new skills to the list above. Preserve source credits and license notices.
+Keep each skill focused on one job. Use `skills/<category>/<slug>/SKILL.md` with `name` and `description` in YAML frontmatter. Include an example task and any tool requirements in your pull request. Add new skills to the list above. New skills also belong in a bot pack (`bots/<slug>/PACK.md`). Prefer an existing pack whose job already covers the skill. If you add a pack, add it to the [bot list](#bots). Preserve source credits and license notices.
 
 ## Inspired by
 
