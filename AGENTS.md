@@ -45,7 +45,16 @@ Every skill follows the open [Agent Skills spec](https://agentskills.io/specific
 
 When you add a skill, also add it to the skill list and the count in `README.md`, run `bash .github/scripts/skill-links.sh`, and put it in a bot pack (see [Bot packs](#bot-packs)).
 
-### Bot packs
+## Grok Bot-only skills
+
+A skill that uses Grok Bot-only tools (routines, tap or approval cards, `SendToUser`, `CreateAgent`, `CloudAgent`, the box, `/home/box/agent-data/` or `/workspace/` paths, and similar) must:
+
+- start its `description` with **"Needs Grok Bot."**,
+- set `compatibility: Needs Grok Bot (<the tools it uses>)`,
+- and say "Needs Grok Bot. Uses routines and approval cards." (or the tools it uses) on the first line of its README.
+
+
+## Bot packs
 
 This repo ships bots, not only skills. A bot is a pack: a persona, the skills it uses, optional routines, and a short getting-started chat.
 
@@ -55,6 +64,14 @@ bots/<bot-name>/README.md  for humans (same page shape as a skill README)
 ```
 
 The skill folders stay the source of each skill. A pack names them. It does not copy them.
+
+### Split test
+
+A pack author must pass this check before adding a pack. If any check fails, make two packs, not one.
+
+- If the one-job sentence needs "and", split.
+- If a fix to one step would never change the other, split.
+- A step with its own approvals and failure modes (posting, sending or spending) is its own bot.
 
 ### PACK.md format
 
@@ -74,17 +91,9 @@ The body, in this order:
 7. **Routines.** If any, the schedule and when they stay quiet.
 8. **Getting started.** The first questions, asked one at a time, and what to do with the answers.
 9. **Probe set.** Four fixed test asks: a typical ask, an anti-job ask, a decision that needs a card, and a quiet case. A rewrite of the persona must pass at least as many of these as the current text.
+10. **Corrections.** Where the shared corrections log lives, and the three steps the bot follows when the user corrects it: update its own instructions and the task SOP; add one dated line to the log (date, bot, what was wrong, the new rule); tell the user in one line which SOP changed. The work is done only when this is in a shared place other bots can read.
 
-When you add a skill, put it in a bot pack as well as the skill list. Prefer an existing pack whose job already covers it. If none fits, add a new pack with one job, a refuse case, a card rule and quiet behaviour. When you add a pack, add it to the bot list in `README.md`.
-
-
-## Grok Bot-only skills
-
-A skill that uses Grok Bot-only tools (routines, tap or approval cards, `SendToUser`, `CreateAgent`, `CloudAgent`, the box, `/home/box/agent-data/` or `/workspace/` paths, and similar) must:
-
-- start its `description` with **"Needs Grok Bot."**,
-- set `compatibility: Needs Grok Bot (<the tools it uses>)`,
-- and say "Needs Grok Bot. Uses routines and approval cards." (or the tools it uses) on the first line of its README.
+When you add a skill, put it in a bot pack as well as the skill list. Prefer an existing pack whose job already covers it. If none fits, add a new pack only after it passes the split test, with a refuse case, a card rule, quiet behaviour and a corrections section. When you add a pack, add it to the bot list in `README.md`.
 
 ## Portable skills
 
@@ -163,3 +172,4 @@ Or copy one skill folder by hand. Copy the skill folder itself (`skills/<categor
 - [ ] Public text passed [botkits-no-ai-slop](skills/writing/botkits-no-ai-slop/).
 - [ ] `bash .github/scripts/skill-links.sh --check` passes.
 - [ ] New skills land in a bot pack, and new packs are on the README bot list.
+- [ ] New packs pass the split test and include a Corrections section.

@@ -9,20 +9,23 @@
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/github/license/botkitsdev/botkits?labelColor=14181B&color=2340C4" alt="MIT license"></a>
   <a href="https://github.com/botkitsdev/botkits/stargazers"><img src="https://img.shields.io/github/stars/botkitsdev/botkits?style=flat&labelColor=14181B&color=F6F7F3" alt="GitHub stars"></a>
-  <a href="#all-skills"><img src="https://img.shields.io/badge/skills-35-F6F7F3?labelColor=14181B" alt="35 skills"></a>
+  <a href="#all-skills"><img src="https://img.shields.io/badge/skills-41-F6F7F3?labelColor=14181B" alt="41 skills"></a>
   <a href="https://botkits.dev"><img src="https://img.shields.io/badge/botkits.dev-2340C4?labelColor=14181B&color=2340C4" alt="botkits.dev"></a>
 </p>
 
 # Skills your bots can run today
 
-Open SKILL.md folders for Claude, ChatGPT, Codex, Cursor, Gemini, Copilot and Grok Bot. 35 skills, used daily by my own Grok Bots. MIT.
+Open SKILL.md folders for Claude, ChatGPT, Codex, Cursor, Gemini, Copilot and Grok Bot. 41 skills, used daily by my own Grok Bots. MIT.
 
 <p align="center">
   <a href="https://botkits.dev">Browse on botkits.dev</a>
   &nbsp;·&nbsp;
   <a href="#premium">Premium</a>
-  <!-- Free Starter Pack: hidden until the pack is live. -->
+  &nbsp;·&nbsp;
+  <a href="https://daniacostaai.gumroad.com/l/botkits-starter-pack?utm_source=github&utm_medium=readme&utm_campaign=starter-pack&utm_content=header-nav">Free Starter Pack</a>
 </p>
+
+Free Starter Pack ($0): 6 MIT skills, a Start Here install guide and a cheat sheet. [Get the Starter Pack](https://daniacostaai.gumroad.com/l/botkits-starter-pack?utm_source=github&utm_medium=readme&utm_campaign=starter-pack&utm_content=header-line)
 
 Install guides and skill pages: [botkits.dev](https://botkits.dev)
 
@@ -30,7 +33,7 @@ Install guides and skill pages: [botkits.dev](https://botkits.dev)
   <img src="assets/demo.gif" alt="Terminal demo: npx skills add botkitsdev/botkits, then a bot loads botkits-no-ai-slop/SKILL.md when the task matches." width="800">
 </p>
 
-[Top 3](#top-3) · [Quick start](#quick-start) · [Use it in](#use-it-in) · [Start here](#start-here) · [All 35 skills](#all-skills) · [Bots](#bots) · [Renamed skills](#renamed-skills) · [How a skill is used](#how-a-skill-is-used) · [Tool requirements](#tool-requirements) · [Premium](#premium) · [Contribute](#contribute) · [Inspired by](#inspired-by) · [License](#license)
+[Top 3](#top-3) · [Quick start](#quick-start) · [Use it in](#use-it-in) · [Start here](#start-here) · [All 41 skills](#all-skills) · [Bots](#bots) · [Renamed skills](#renamed-skills) · [How a skill is used](#how-a-skill-is-used) · [Tool requirements](#tool-requirements) · [Premium](#premium) · [Contribute](#contribute) · [Inspired by](#inspired-by) · [License](#license)
 
 ## Top 3
 
@@ -64,7 +67,7 @@ npx skills add botkitsdev/botkits
 
 To install one skill, add `--skill` and its folder name, for example `npx skills add botkitsdev/botkits --skill botkits-no-ai-slop`. Run `npx skills add botkitsdev/botkits --list` to see them all.
 
-For all 35 skills, download the [ZIP](https://github.com/botkitsdev/botkits/archive/refs/heads/main.zip), or clone the repo:
+For all 41 skills, download the [ZIP](https://github.com/botkitsdev/botkits/archive/refs/heads/main.zip), or clone the repo:
 
 ```sh
 git clone https://github.com/botkitsdev/botkits.git
@@ -80,7 +83,7 @@ Free skills I use daily to run my 3 YouTube channels. My bots run on Grok Bot. T
 
 Made by Dani Acosta. Follow on X: [@DaniAcostaAI](https://x.com/DaniAcostaAI)
 
-35 skills and 1 bot pack, for writing, design, code, SEO, ads, YouTube research and planning, video, images, and bot routines. Give your bot a clear process for the job you need done.
+41 skills and 2 bot packs, for writing, design, code, MCP servers, SEO, ads, YouTube research and planning, video, images, and bot routines. Give your bot a clear process for the job you need done.
 
 Every skill is Dani's own version, inspired by several public references rather than copied from one. Each is a single readable `SKILL.md`. The rewritten skills end with what inspired them, what those references were missing, and what this version adds.
 
@@ -114,6 +117,7 @@ Some bot and engineering skills use Grok Bot tools. As written, they need Grok B
 | Remove AI filler from a draft | [botkits-no-ai-slop](skills/writing/botkits-no-ai-slop/) |
 | Improve a website's design | [botkits-redesign-existing-projects](skills/design/botkits-redesign-existing-projects/) |
 | Create a bot with one clear job | [botkits-design-a-grok-bot](skills/bots/botkits-design-a-grok-bot/) |
+| Set up a bot that reviews agent tools, event wakes and skill upgrades | [botkits-agent-tooling-coach](bots/botkits-agent-tooling-coach/) |
 | Find noisy or wasteful routines | [botkits-routine-healthcheck](skills/bots/botkits-routine-healthcheck/) |
 | Write a post for X or LinkedIn | [botkits-social-copywriting](skills/writing/botkits-social-copywriting/) |
 | Write a storytelling hook | [botkits-storytelling-hooks](skills/writing/botkits-storytelling-hooks/) |
@@ -191,6 +195,7 @@ updates. Show the evidence. Propose changes before applying them.
 | [botkits-engineering-playbook](skills/engineering/botkits-engineering-playbook/) | Delegate coding work to cloud agents and review the results. |
 | [botkits-show-me](skills/engineering/botkits-show-me/) | Explain code changes with visual PR descriptions. |
 | [botkits-system-design-explorer](skills/engineering/botkits-system-design-explorer/) | Explain a system design on one keyboard-driven HTML page: decisions, an animated diagram, an event demo, a layer stack, walkthroughs, and a sheet for every box. |
+| [botkits-mcp-tool-surface-review](skills/engineering/botkits-mcp-tool-surface-review/) | Review an MCP server's tool list against a fixed check list and rewrite the two worst tools. |
 
 ### SEO
 
@@ -213,6 +218,8 @@ updates. Show the evidence. Propose changes before applying them.
 | Skill | What it does |
 | --- | --- |
 | [botkits-youtube-niche-report](skills/youtube/botkits-youtube-niche-report/) | Pull a niche's top videos, score them against their own channel, and build an interactive HTML report of what wins. Ships with an example config for a made-up niche. |
+| [botkits-youtube-channel-analysis](skills/youtube/botkits-youtube-channel-analysis/) | Analyse one channel from public data: outliers against its own median, cadence, packaging, Shorts versus long-form, a search or browse lane guess, a rough RPM band, and 3 to 5 ideas. |
+| [botkits-channel-performance-page](skills/youtube/botkits-channel-performance-page/) | Turn one YouTube Studio CSV export into a visual page: totals, Shorts "% stayed" bars and long-video CTR bars. Ships with a made-up sample export. |
 | [botkits-youtube-monetization-plan](skills/youtube/botkits-youtube-monetization-plan/) | Size the gap to the YouTube Partner Program thresholds, check your weekly pace, and write a week-by-week plan with a review rule. No promised date. |
 | [botkits-youtube-title-thumbnail-set](skills/youtube/botkits-youtube-title-thumbnail-set/) | Write 10 honest titles and 3 thumbnail concepts for one video, score them, and pick a pair. |
 
@@ -233,6 +240,8 @@ updates. Show the evidence. Propose changes before applying them.
 | [botkits-transcript-healthcheck](skills/bots/botkits-transcript-healthcheck/) | Find repeated friction in bot transcripts. |
 | [botkits-overheard](skills/bots/botkits-overheard/) | Compile a digest of third-party mentions. |
 | [botkits-overheard-setup](skills/bots/botkits-overheard-setup/) | Set up a mention watch list, sources, and schedule. |
+| [botkits-event-wake-plan](skills/bots/botkits-event-wake-plan/) | Plan an agent that wakes on events: duplicate rule, event text as data, human taps for risky actions, and a hostile test event. |
+| [botkits-skill-upgrade-check](skills/bots/botkits-skill-upgrade-check/) | Pin a skill, run 5 test tasks before and after a change, and get a keep or hold verdict. |
 
 ### Images
 
@@ -243,10 +252,11 @@ updates. Show the evidence. Propose changes before applying them.
 
 ## Bots
 
-A bot is a pack: a persona, the skills it uses, optional routines, and a short getting-started chat. Load [PACK.md](bots/botkits-youtube-growth-coach/PACK.md), then install the skills it lists. The format is in [AGENTS.md](AGENTS.md#bot-packs).
+A bot is a pack: a persona, the skills it uses, optional routines, and a short getting-started chat. Load a bot's `PACK.md`, then install the skills it lists. The format is in [AGENTS.md](AGENTS.md#bot-packs).
 
 | Bot | What it does |
 | --- | --- |
+| [botkits-agent-tooling-coach](bots/botkits-agent-tooling-coach/) | Review an agent's tools, plan how it wakes on events, and check a skill or model change before it goes live. It does not turn anything on. |
 | [botkits-youtube-growth-coach](bots/botkits-youtube-growth-coach/) | Study a niche, plan an honest pace to the Partner Program thresholds, and pick a title and thumbnail pair. It does not upload or promise a date. |
 
 ## Renamed skills
@@ -309,6 +319,8 @@ The instructions are plain Markdown. Some workflows need more than a chat window
 - `botkits-diagram-design` runs on its own. If [Cathryn Lavery's diagram pack](https://github.com/cathrynlavery/diagram-design) is installed, it uses that pack's type references too. Its optional line-draw clip needs a headless browser only if you record webm or mp4. Do not commit gif, mp4, webm, or rendered png files.
 - `botkits-motion-picker` needs no package of its own. It chooses a library and a timing preset. The same media rule applies: captures stay out of git.
 - `botkits-youtube-niche-report` runs Python scripts with yt-dlp, ffmpeg and Pillow on a machine that can reach YouTube.
+- `botkits-youtube-channel-analysis` runs one Python script with yt-dlp on a machine that can reach YouTube. Pillow is optional (thumbnail sheet).
+- `botkits-channel-performance-page` runs one Python 3 script (standard library only) on a CSV the owner exports from YouTube Studio.
 - `botkits-shorts-reframe` needs ffmpeg and ffprobe on the machine that holds the source video.
 - `botkits-system-design-explorer` writes one static HTML file. Its review step uses a headless browser (Playwright) for screenshots when one is available.
 - `botkits-video-plan-page` runs one Python 3 script. Pillow is optional (it shrinks embedded images); the tests' browser check needs Playwright and skips without it.
@@ -356,6 +368,7 @@ Each skill here is written from scratch in our own words, drawing on several ref
 - **botkits-markdown-twin:** inspired by [Jeremy Howard / llmstxt.org](https://llmstxt.org/): the /llms.txt v2 proposal.
 - **botkits-shorts-reframe:** inspired by [FFmpeg crop filter documentation](https://ffmpeg.org/ffmpeg-filters.html#crop) and the [mediacodec.dev crop guide](https://mediacodec.dev/how-to/crop-video/).
 - **botkits-system-design-explorer:** Dani's own system design explorer (private), rewritten as a standalone skill with a made-up example system. Also draws on [Ben Shneiderman's "The Eyes Have It"](https://doi.org/10.1109/VL.1996.545307) and the [C4 model's notation guide](https://c4model.com/diagrams/notation).
+- **botkits-youtube-channel-analysis:** inspired by [1of10's competitor guide](https://1of10.com/blog/find-youtube-competitors/), [Bomx's outlier playbook](https://github.com/Bomx/viral-agent-1of10/blob/main/OUTLIER_PLAYBOOK.md), two YouTube Help pages on [CTR and impressions](https://support.google.com/youtube/answer/16767369) and [video reach](https://support.google.com/youtubecreatorstudio/answer/9314355), [ReachMath's RPM by niche](https://reachmath.com/data/youtube-rpm-by-niche/), [Autonolab's packaging guide](https://blog.autonolab.com/blog/2025-07-06-the-packaging-doctrine-thumbnail-title-systems-used-by-viral-operators/), the [YouTube Data API quota table](https://developers.google.com/youtube/data/determine_quota_cost) and [ViewStats' Competitors tool](https://viewstats.zendesk.com/hc/en-us/articles/28242057319707-Competitors-Tool), all read on 28 Nov 2026.
 - **botkits-video-plan-page:** Dani's own storytelling-video plan page (private channel repo, PR #204), rewritten as a standalone skill.
 - **botkits-x-article, botkits-chatgpt-images-browser-playbook:** Dani's own workflows; no outside source verified.
 
