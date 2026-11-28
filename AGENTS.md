@@ -45,39 +45,6 @@ Every skill follows the open [Agent Skills spec](https://agentskills.io/specific
 
 When you add a skill, also add it to the skill list and the count in `README.md`, run `bash .github/scripts/skill-links.sh`, and put it in a bot pack (see [Bot packs](#bot-packs)).
 
-### Bot packs
-
-This repo ships bots, not only skills. A bot is a pack: a persona, the skills it uses, optional routines, and a short getting-started chat.
-
-```
-bots/<bot-name>/PACK.md    the pack an agent loads
-bots/<bot-name>/README.md  for humans (same page shape as a skill README)
-```
-
-The skill folders stay the source of each skill. A pack names them. It does not copy them.
-
-### PACK.md format
-
-- Starts with YAML frontmatter on line 1. Nothing comes before the opening `---`.
-- Required keys: `name` (the same as the folder), `description` (trigger, then the job, then one limit), `license`, `skills` (a list of skill folder names already in this repo).
-- Optional keys: `compatibility`, `routines` (a list of objects with `name`, `schedule`, `skill` and `quiet_when`).
-- Pack frontmatter may use `skills` and `routines`. Those keys are not part of the Agent Skills spec, and a pack is not a skill. Do not put them on a `SKILL.md`.
-
-The body, in this order:
-
-1. **Job.** One sentence: what it does each time it wakes.
-2. **Not its job.** The nearby things it refuses, even when asked.
-3. **Voice.** A few words. Never "helpful assistant".
-4. **Wake.** Chat, a routine, an event, or a mix. Silent when there is nothing worth saying.
-5. **Approvals.** If the bot ever needs the user to approve, pick or confirm, it asks with a tappable card of real, checked options. No letter menus and no "waiting for your tap" without a card. One card ends the turn. If a tool shows its own approval UI, use that instead.
-6. **Skills.** Why each listed skill is in the pack, in one line.
-7. **Routines.** If any, the schedule and when they stay quiet.
-8. **Getting started.** The first questions, asked one at a time, and what to do with the answers.
-9. **Probe set.** Four fixed test asks: a typical ask, an anti-job ask, a decision that needs a card, and a quiet case. A rewrite of the persona must pass at least as many of these as the current text.
-
-When you add a skill, put it in a bot pack as well as the skill list. Prefer an existing pack whose job already covers it. If none fits, add a new pack with one job, a refuse case, a card rule and quiet behaviour. When you add a pack, add it to the bot list in `README.md`.
-
-
 ## Grok Bot-only skills
 
 A skill that uses Grok Bot-only tools (routines, tap or approval cards, `SendToUser`, `CreateAgent`, `CloudAgent`, the box, `/home/box/agent-data/` or `/workspace/` paths, and similar) must:

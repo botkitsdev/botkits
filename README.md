@@ -9,13 +9,13 @@
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/github/license/botkitsdev/botkits?labelColor=14181B&color=2340C4" alt="MIT license"></a>
   <a href="https://github.com/botkitsdev/botkits/stargazers"><img src="https://img.shields.io/github/stars/botkitsdev/botkits?style=flat&labelColor=14181B&color=F6F7F3" alt="GitHub stars"></a>
-  <a href="#all-skills"><img src="https://img.shields.io/badge/skills-39-F6F7F3?labelColor=14181B" alt="39 skills"></a>
+  <a href="#all-skills"><img src="https://img.shields.io/badge/skills-41-F6F7F3?labelColor=14181B" alt="41 skills"></a>
   <a href="https://botkits.dev"><img src="https://img.shields.io/badge/botkits.dev-2340C4?labelColor=14181B&color=2340C4" alt="botkits.dev"></a>
 </p>
 
 # Skills your bots can run today
 
-Open SKILL.md folders for Claude, ChatGPT, Codex, Cursor, Gemini, Copilot and Grok Bot. 39 skills, used daily by my own Grok Bots. MIT.
+Open SKILL.md folders for Claude, ChatGPT, Codex, Cursor, Gemini, Copilot and Grok Bot. 41 skills, used daily by my own Grok Bots. MIT.
 
 <p align="center">
   <a href="https://botkits.dev">Browse on botkits.dev</a>
@@ -33,7 +33,7 @@ Install guides and skill pages: [botkits.dev](https://botkits.dev)
   <img src="assets/demo.gif" alt="Terminal demo: npx skills add botkitsdev/botkits, then a bot loads botkits-no-ai-slop/SKILL.md when the task matches." width="800">
 </p>
 
-[Top 3](#top-3) · [Quick start](#quick-start) · [Use it in](#use-it-in) · [Start here](#start-here) · [All 39 skills](#all-skills) · [Bots](#bots) · [Renamed skills](#renamed-skills) · [How a skill is used](#how-a-skill-is-used) · [Tool requirements](#tool-requirements) · [Premium](#premium) · [Contribute](#contribute) · [Inspired by](#inspired-by) · [License](#license)
+[Top 3](#top-3) · [Quick start](#quick-start) · [Use it in](#use-it-in) · [Start here](#start-here) · [All 41 skills](#all-skills) · [Bots](#bots) · [Renamed skills](#renamed-skills) · [How a skill is used](#how-a-skill-is-used) · [Tool requirements](#tool-requirements) · [Premium](#premium) · [Contribute](#contribute) · [Inspired by](#inspired-by) · [License](#license)
 
 ## Top 3
 
@@ -67,7 +67,7 @@ npx skills add botkitsdev/botkits
 
 To install one skill, add `--skill` and its folder name, for example `npx skills add botkitsdev/botkits --skill botkits-no-ai-slop`. Run `npx skills add botkitsdev/botkits --list` to see them all.
 
-For all 39 skills, download the [ZIP](https://github.com/botkitsdev/botkits/archive/refs/heads/main.zip), or clone the repo:
+For all 41 skills, download the [ZIP](https://github.com/botkitsdev/botkits/archive/refs/heads/main.zip), or clone the repo:
 
 ```sh
 git clone https://github.com/botkitsdev/botkits.git
@@ -83,7 +83,7 @@ Free skills I use daily to run my 3 YouTube channels. My bots run on Grok Bot. T
 
 Made by Dani Acosta. Follow on X: [@DaniAcostaAI](https://x.com/DaniAcostaAI)
 
-39 skills and 1 bot pack, for writing, design, code, MCP servers, SEO, ads, YouTube research, video, images, and bot routines. Give your bot a clear process for the job you need done.
+41 skills and 2 bot packs, for writing, design, code, MCP servers, SEO, ads, YouTube research and planning, video, images, and bot routines. Give your bot a clear process for the job you need done.
 
 Every skill is Dani's own version, inspired by several public references rather than copied from one. Each is a single readable `SKILL.md`. The rewritten skills end with what inspired them, what those references were missing, and what this version adds.
 
@@ -123,6 +123,7 @@ Some bot and engineering skills use Grok Bot tools. As written, they need Grok B
 | Write a storytelling hook | [botkits-storytelling-hooks](skills/writing/botkits-storytelling-hooks/) |
 | Get better leads from automated ad campaigns | [botkits-whetstone-signal](skills/ads/botkits-whetstone-signal/) |
 | Find what wins in a YouTube niche before planning videos | [botkits-youtube-niche-report](skills/youtube/botkits-youtube-niche-report/) |
+| Set up a YouTube growth coach bot | [botkits-youtube-growth-coach](bots/botkits-youtube-growth-coach/) |
 
 ### Prefer the originals?
 
@@ -219,6 +220,8 @@ updates. Show the evidence. Propose changes before applying them.
 | [botkits-youtube-niche-report](skills/youtube/botkits-youtube-niche-report/) | Pull a niche's top videos, score them against their own channel, and build an interactive HTML report of what wins. Ships with an example config for a made-up niche. |
 | [botkits-youtube-channel-analysis](skills/youtube/botkits-youtube-channel-analysis/) | Analyse one channel from public data: outliers against its own median, cadence, packaging, Shorts versus long-form, a search or browse lane guess, a rough RPM band, and 3 to 5 ideas. |
 | [botkits-channel-performance-page](skills/youtube/botkits-channel-performance-page/) | Turn one YouTube Studio CSV export into a visual page: totals, Shorts "% stayed" bars and long-video CTR bars. Ships with a made-up sample export. |
+| [botkits-youtube-monetization-plan](skills/youtube/botkits-youtube-monetization-plan/) | Size the gap to the YouTube Partner Program thresholds, check your weekly pace, and write a week-by-week plan with a review rule. No promised date. |
+| [botkits-youtube-title-thumbnail-set](skills/youtube/botkits-youtube-title-thumbnail-set/) | Write 10 honest titles and 3 thumbnail concepts for one video, score them, and pick a pair. |
 
 ### Video
 
@@ -249,11 +252,12 @@ updates. Show the evidence. Propose changes before applying them.
 
 ## Bots
 
-A bot is a pack: a persona, the skills it uses, optional routines, and a short getting-started chat. Load [PACK.md](bots/botkits-agent-tooling-coach/PACK.md), then install the skills it lists. The format is in [AGENTS.md](AGENTS.md#bot-packs).
+A bot is a pack: a persona, the skills it uses, optional routines, and a short getting-started chat. Load a bot's `PACK.md`, then install the skills it lists. The format is in [AGENTS.md](AGENTS.md#bot-packs).
 
 | Bot | What it does |
 | --- | --- |
 | [botkits-agent-tooling-coach](bots/botkits-agent-tooling-coach/) | Review an agent's tools, plan how it wakes on events, and check a skill or model change before it goes live. It does not turn anything on. |
+| [botkits-youtube-growth-coach](bots/botkits-youtube-growth-coach/) | Study a niche, plan an honest pace to the Partner Program thresholds, and pick a title and thumbnail pair. It does not upload or promise a date. |
 
 ## Renamed skills
 
