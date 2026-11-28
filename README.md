@@ -21,8 +21,11 @@ Open SKILL.md folders for Claude, ChatGPT, Codex, Cursor, Gemini, Copilot and Gr
   <a href="https://botkits.dev">Browse on botkits.dev</a>
   &nbsp;·&nbsp;
   <a href="#premium">Premium</a>
-  <!-- Free Starter Pack: hidden until the pack is live. -->
+  &nbsp;·&nbsp;
+  <a href="https://daniacostaai.gumroad.com/l/botkits-starter-pack?utm_source=github&utm_medium=readme&utm_campaign=starter-pack&utm_content=header-nav">Free Starter Pack</a>
 </p>
+
+Free Starter Pack ($0): 6 MIT skills, a Start Here install guide and a cheat sheet. [Get the Starter Pack](https://daniacostaai.gumroad.com/l/botkits-starter-pack?utm_source=github&utm_medium=readme&utm_campaign=starter-pack&utm_content=header-line)
 
 Install guides and skill pages: [botkits.dev](https://botkits.dev)
 
