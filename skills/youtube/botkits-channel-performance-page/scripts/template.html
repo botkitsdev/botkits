@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{TITLE}}</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,600&family=Hanken+Grotesk:wght@400;600;700&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* BotKits tokens (DESIGN.md). Visual only: tiles, bars, short labels. */
+:root{--bg:#f1f2ee;--surface:#fafaf7;--ink:#14181b;--muted:#535b61;--rule:#d2d6ce;--track:#e4e6df;--blue:#2340c4;--mid:#8a97d6;--spark:#F2762E;
+--display:"Newsreader",Georgia,serif;--sans:"Hanken Grotesk",system-ui,sans-serif;--mono:"DM Mono",ui-monospace,Menlo,monospace;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111418;--surface:#171b20;--ink:#e7e9e3;--muted:#9ea7ad;--rule:#2b3138;--track:#22272e;--blue:#a3b4ff;--mid:#5d6aa8;--spark:#FF9A5C;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#111418;--surface:#171b20;--ink:#e7e9e3;--muted:#9ea7ad;--rule:#2b3138;--track:#22272e;--blue:#a3b4ff;--mid:#5d6aa8;--spark:#FF9A5C;color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 var(--sans);overflow-x:clip}
+.wrap{max-width:960px;margin:0 auto;padding:24px 16px 40px;display:grid;gap:16px}
+h1{font:600 clamp(1.6rem,4.5vw,2.3rem)/1.1 var(--display);letter-spacing:-.02em;margin:0}
+h2{font-size:1rem;margin:0 0 12px}
+.sub{color:var(--muted);font-size:.85rem;margin-top:6px}
+.panel{background:var(--surface);border:1px solid var(--rule);border-radius:8px;padding:16px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.tile{background:var(--surface);border:1px solid var(--rule);border-radius:8px;padding:12px;display:grid;gap:2px;align-content:start}
+.tile .k{font-size:.78rem;font-weight:600;color:var(--muted)}
+.tile .v{font:500 1.5rem var(--mono);font-variant-numeric:tabular-nums}
+.tile .sm{font:.72rem var(--mono);color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:.8rem;padding:4px 10px;border-radius:6px;border:1px solid var(--rule)}
+.chip b{font-family:var(--mono);font-weight:500;margin-left:6px}
+.chip.win{border-color:var(--blue);color:var(--blue)}
+.chip.lose{border-color:var(--spark);color:var(--spark)}
+.bars{display:grid;gap:8px}
+.row{display:grid;grid-template-columns:minmax(110px,260px) minmax(0,1fr) 56px;gap:10px;align-items:center;font-size:.82rem}
+.row .lb{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.row .v{font:.78rem var(--mono);text-align:right;font-variant-numeric:tabular-nums}
+.trk{height:14px;background:var(--track);border-radius:2px;overflow:hidden}
+.trk span{display:block;height:100%;background:var(--blue)}
+.trk span.mid{background:var(--mid)}.trk span.lo{background:var(--spark)}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:.75rem;color:var(--muted);margin-top:10px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.empty{color:var(--muted);font-size:.85rem}
+.foot{font-size:.72rem;color:var(--muted);margin:0}
+@media (max-width:520px){.row{grid-template-columns:110px minmax(0,1fr) 48px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header><h1>{{H1}}</h1><div class="sub">{{SUB}}</div></header>
+  <section class="tiles" id="tiles" aria-label="Channel totals"></section>
+  <section class="panel" id="chips-panel"><h2>Winners and misses</h2><div class="chips" id="chips"></div></section>
+  <section class="grid2">
+    <div class="panel">
+      <h2>Shorts: % who stayed</h2>
+      <div class="bars" id="stayed"></div>
+      <div class="legend"><span><i style="background:var(--blue)"></i>40%+</span><span><i style="background:var(--mid)"></i>25–40%</span><span><i style="background:var(--spark)"></i>under 25%</span><span id="star-note"></span></div>
+    </div>
+    <div class="panel">
+      <h2>Long videos: CTR</h2>
+      <div class="bars" id="ctr"></div>
+      <div class="legend"><span><i style="background:var(--blue)"></i>4%+</span><span><i style="background:var(--mid)"></i>2–4%</span><span><i style="background:var(--spark)"></i>under 2%</span></div>
+    </div>
+  </section>
+  <p class="foot" id="foot"></p>
+</div>
+<script>
+const D=/*{{DATA}}*/null;
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const fmt=(v,unit)=>v==null?"–":(unit==="%"?Number(v).toFixed(1)+"%":Number(v).toLocaleString("en-US",{maximumFractionDigits:1}));
+document.getElementById("tiles").innerHTML=D.tiles.map(t=>{
+  const v=t.sign&&t.v>0?"+"+fmt(t.v):fmt(t.v,t.unit);
+  return `<div class="tile"><span class="k">${esc(t.k)}</span><span class="v">${esc(v)}</span>${t.sm?`<span class="sm" title="${esc(t.sm)}">${esc(t.sm)}</span>`:""}</div>`}).join("");
+const chips=D.wins.map(c=>`<span class="chip win">${esc(c.t)}<b>${esc(c.v)}</b></span>`).concat(D.loses.map(c=>`<span class="chip lose">${esc(c.t)}<b>${esc(c.v)}</b></span>`));
+if(chips.length)document.getElementById("chips").innerHTML=chips.join("");else document.getElementById("chips-panel").hidden=true;
+const bars=(el,items,max,unitFn,empty)=>{document.getElementById(el).innerHTML=items.length?items.map(i=>`<div class="row"><span class="lb" title="${esc(i.t)}">${i.new?"★ ":""}${esc(i.t)}</span><span class="trk"><span class="${i.b}" style="width:${Math.min(i.p,max)/max*100}%"></span></span><span class="v">${unitFn(i.p)}</span></div>`).join(""):`<p class="empty">${empty}</p>`};
+const smax=Math.max(70,...D.stayed.map(i=>i.p)),cmax=Math.max(8,...D.ctr.map(i=>i.p));
+bars("stayed",D.stayed,smax,p=>p.toFixed(0)+"%","No Shorts with % stayed in this export.");
+bars("ctr",D.ctr,cmax,p=>p.toFixed(1)+"%","No long videos with CTR in this export.");
+if(D.stayed.some(i=>i.new))document.getElementById("star-note").textContent=`★ last ${D.newDays} days`;
+document.getElementById("foot").textContent=D.foot;
+</script>
+</body>
+</html>

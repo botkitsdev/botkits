@@ -9,13 +9,13 @@
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/github/license/botkitsdev/botkits?labelColor=14181B&color=2340C4" alt="MIT license"></a>
   <a href="https://github.com/botkitsdev/botkits/stargazers"><img src="https://img.shields.io/github/stars/botkitsdev/botkits?style=flat&labelColor=14181B&color=F6F7F3" alt="GitHub stars"></a>
-  <a href="#all-skills"><img src="https://img.shields.io/badge/skills-33-F6F7F3?labelColor=14181B" alt="33 skills"></a>
+  <a href="#all-skills"><img src="https://img.shields.io/badge/skills-34-F6F7F3?labelColor=14181B" alt="34 skills"></a>
   <a href="https://botkits.dev"><img src="https://img.shields.io/badge/botkits.dev-2340C4?labelColor=14181B&color=2340C4" alt="botkits.dev"></a>
 </p>
 
 # Skills your bots can run today
 
-Open SKILL.md folders for Claude, ChatGPT, Codex, Cursor, Gemini, Copilot and Grok Bot. 33 skills, used daily by my own Grok Bots. MIT.
+Open SKILL.md folders for Claude, ChatGPT, Codex, Cursor, Gemini, Copilot and Grok Bot. 34 skills, used daily by my own Grok Bots. MIT.
 
 <p align="center">
   <a href="https://botkits.dev">Browse on botkits.dev</a>
@@ -33,7 +33,7 @@ Install guides and skill pages: [botkits.dev](https://botkits.dev)
   <img src="assets/demo.gif" alt="Terminal demo: npx skills add botkitsdev/botkits, then a bot loads botkits-no-ai-slop/SKILL.md when the task matches." width="800">
 </p>
 
-[Top 3](#top-3) · [Quick start](#quick-start) · [Use it in](#use-it-in) · [Start here](#start-here) · [All 33 skills](#all-skills) · [Renamed skills](#renamed-skills) · [How a skill is used](#how-a-skill-is-used) · [Tool requirements](#tool-requirements) · [Premium](#premium) · [Contribute](#contribute) · [Inspired by](#inspired-by) · [License](#license)
+[Top 3](#top-3) · [Quick start](#quick-start) · [Use it in](#use-it-in) · [Start here](#start-here) · [All 34 skills](#all-skills) · [Renamed skills](#renamed-skills) · [How a skill is used](#how-a-skill-is-used) · [Tool requirements](#tool-requirements) · [Premium](#premium) · [Contribute](#contribute) · [Inspired by](#inspired-by) · [License](#license)
 
 ## Top 3
 
@@ -67,7 +67,7 @@ npx skills add botkitsdev/botkits
 
 To install one skill, add `--skill` and its folder name, for example `npx skills add botkitsdev/botkits --skill botkits-no-ai-slop`. Run `npx skills add botkitsdev/botkits --list` to see them all.
 
-For all 33 skills, download the [ZIP](https://github.com/botkitsdev/botkits/archive/refs/heads/main.zip), or clone the repo:
+For all 34 skills, download the [ZIP](https://github.com/botkitsdev/botkits/archive/refs/heads/main.zip), or clone the repo:
 
 ```sh
 git clone https://github.com/botkitsdev/botkits.git
@@ -83,7 +83,7 @@ Free skills I use daily to run my 3 YouTube channels. My bots run on Grok Bot. T
 
 Made by Dani Acosta. Follow on X: [@DaniAcostaAI](https://x.com/DaniAcostaAI)
 
-33 skills for writing, design, code, SEO, ads, YouTube research, video, images, and bot routines. Give your bot a clear process for the job you need done.
+34 skills for writing, design, code, SEO, ads, YouTube research, video, images, and bot routines. Give your bot a clear process for the job you need done.
 
 Every skill is Dani's own version, inspired by several public references rather than copied from one. Each is a single readable `SKILL.md`. The rewritten skills end with what inspired them, what those references were missing, and what this version adds.
 
@@ -215,6 +215,7 @@ updates. Show the evidence. Propose changes before applying them.
 | Skill | What it does |
 | --- | --- |
 | [botkits-youtube-niche-report](skills/youtube/botkits-youtube-niche-report/) | Pull a niche's top videos, score them against their own channel, and build an interactive HTML report of what wins. Ships with an example config for a made-up niche. |
+| [botkits-channel-performance-page](skills/youtube/botkits-channel-performance-page/) | Turn one YouTube Studio CSV export into a visual page: totals, Shorts "% stayed" bars and long-video CTR bars. Ships with a made-up sample export. |
 
 ### Video
 
@@ -301,6 +302,7 @@ The instructions are plain Markdown. Some workflows need more than a chat window
 - `botkits-diagram-design` runs on its own. If [Cathryn Lavery's diagram pack](https://github.com/cathrynlavery/diagram-design) is installed, it uses that pack's type references too. Its optional line-draw clip needs a headless browser only if you record webm or mp4. Do not commit gif, mp4, webm, or rendered png files.
 - `botkits-motion-picker` needs no package of its own. It chooses a library and a timing preset. The same media rule applies: captures stay out of git.
 - `botkits-youtube-niche-report` runs Python scripts with yt-dlp, ffmpeg and Pillow on a machine that can reach YouTube.
+- `botkits-channel-performance-page` runs one Python 3 script (standard library only) on a CSV the owner exports from YouTube Studio.
 - `botkits-shorts-reframe` needs ffmpeg and ffprobe on the machine that holds the source video.
 - `botkits-system-design-explorer` writes one static HTML file. Its review step uses a headless browser (Playwright) for screenshots when one is available.
 - `botkits-video-plan-page` runs one Python 3 script. Pillow is optional (it shrinks embedded images); the tests' browser check needs Playwright and skips without it.
