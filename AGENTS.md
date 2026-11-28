@@ -86,6 +86,48 @@ A skill that uses Grok Bot-only tools (routines, tap or approval cards, `SendToU
 - set `compatibility: Needs Grok Bot (<the tools it uses>)`,
 - and say "Needs Grok Bot. Uses routines and approval cards." (or the tools it uses) on the first line of its README.
 
+
+## Bot packs
+
+This repo ships bots, not only skills. A bot is a pack: a persona, the skills it uses, optional routines, and a short getting-started chat.
+
+```
+bots/<bot-name>/PACK.md    the pack an agent loads
+bots/<bot-name>/README.md  for humans (same page shape as a skill README)
+```
+
+The skill folders stay the source of each skill. A pack names them. It does not copy them.
+
+### Split test
+
+A pack author must pass this check before adding a pack. If any check fails, make two packs, not one.
+
+- If the one-job sentence needs "and", split.
+- If a fix to one step would never change the other, split.
+- A step with its own approvals and failure modes (posting, sending or spending) is its own bot.
+
+### PACK.md format
+
+- Starts with YAML frontmatter on line 1. Nothing comes before the opening `---`.
+- Required keys: `name` (the same as the folder), `description` (trigger, then the job, then one limit), `license`, `skills` (a list of skill folder names already in this repo).
+- Optional keys: `compatibility`, `routines` (a list of objects with `name`, `schedule`, `skill` and `quiet_when`).
+- Pack frontmatter may use `skills` and `routines`. Those keys are not part of the Agent Skills spec, and a pack is not a skill. Do not put them on a `SKILL.md`.
+
+The body, in this order:
+
+1. **Job.** One sentence: what it does each time it wakes.
+2. **Not its job.** The nearby things it refuses, even when asked.
+3. **Voice.** A few words. Never "helpful assistant".
+4. **Wake.** Chat, a routine, an event, or a mix. Silent when there is nothing worth saying.
+5. **Approvals.** If the bot ever needs the user to approve, pick or confirm, it asks with a tappable card of real, checked options. No letter menus and no "waiting for your tap" without a card. One card ends the turn. If a tool shows its own approval UI, use that instead.
+6. **Skills.** Why each listed skill is in the pack, in one line.
+7. **Routines.** If any, the schedule and when they stay quiet.
+8. **Getting started.** The first questions, asked one at a time, and what to do with the answers.
+9. **Probe set.** Four fixed test asks: a typical ask, an anti-job ask, a decision that needs a card, and a quiet case. A rewrite of the persona must pass at least as many of these as the current text.
+10. **Corrections.** Where the shared corrections log lives, and the three steps the bot follows when the user corrects it: update its own instructions and the task SOP; add one dated line to the log (date, bot, what was wrong, the new rule); tell the user in one line which SOP changed. The work is done only when this is in a shared place other bots can read.
+
+When you add a skill, put it in a bot pack as well as the skill list. Prefer an existing pack whose job already covers it. If none fits, add a new pack only after it passes the split test, with a refuse case, a card rule, quiet behaviour and a corrections section. When you add a pack, add it to the bot list in `README.md`.
+
 ## Portable skills
 
 To keep a skill usable outside one bot:
@@ -163,3 +205,4 @@ Or copy one skill folder by hand. Copy the skill folder itself (`skills/<categor
 - [ ] Public text passed [botkits-no-ai-slop](skills/writing/botkits-no-ai-slop/).
 - [ ] `bash .github/scripts/skill-links.sh --check` passes.
 - [ ] New skills land in a bot pack, and new packs are on the README bot list.
+- [ ] New packs pass the split test and include a Corrections section.
