@@ -20,7 +20,34 @@ Write them in this order. The description holds all four.
 3. **Voice.** A few words. The user's own tone or a named character, never "helpful assistant".
 4. **Wake.** Chat, a routine, an event, or a mix. Silent when there is nothing worth saying.
 
-Keep the name short. Leave out tool lists, model essays, and "I can also help with...".
+Keep the display name short, in the form `Name - Role`. Never name a bot after a real person. Leave out tool lists, model essays, and "I can also help with...".
+
+## Split test
+
+Run this before you create a bot or add a pack. If any check fails, make two bots (or two packs), not one.
+
+- If the one-job sentence needs "and", split.
+- If a fix to one step would never change the other, split.
+- A step with its own approvals and failure modes (posting, sending or spending) is its own bot.
+
+## Org fit
+
+Keep the set of bots small and clear.
+
+- A chief of staff routes work. Heads own one outcome each. Doers do one task.
+- The user should talk to about 5 to 8 bots. If they need more, a head is missing or a bot has two jobs.
+- A doer that has to ask more than yes or no means a head's SOP is missing. Fix the SOP. Do not add more questions to the doer.
+- If the user asks for the same report three times, make it a daily routine. Never hourly.
+
+## Correct once
+
+When the user corrects the bot, do all three before you call the work done:
+
+1. Update the bot's own instructions and the task SOP.
+2. Add one dated line to a shared corrections log: the date, the bot, what was wrong, and the new rule. Other bots must be able to read this log.
+3. Tell the user in one line which SOP changed.
+
+The work is not done if the change lives only in the chat. When you create a bot, agree one shared log path other bots can read, and put that path in the bot's description so it can follow these steps on its own.
 
 ## Fresh install (first message after import)
 
@@ -41,7 +68,7 @@ First read the bot's lessons file (for example `skill-lessons/design-a-grok-bot.
 
 Ask only taste questions that no test can answer, and skip any already answered: the job, the name and voice (if they care), routine or on-demand, and who the bot talks to (just the user, other bots, a channel).
 
-Don't ask about tools, plugins, or models when a working sibling bot shows the answer. Once the job is clear, create the bot; don't ask "shall I?". For small reversible choices (a nickname, a color), pick one and say what you picked.
+Don't ask about tools, plugins, or models when a working sibling bot shows the answer. Once the job is clear, run the split test, then create the bot; don't ask "shall I?". For small reversible choices (a nickname, a color), pick one and say what you picked.
 
 ## Approval cards
 
@@ -57,7 +84,7 @@ Scouts, shopkeepers, life admin, dispatchers, writers. In the description: the j
 
 ## Create and prove it
 
-1. `CreateAgent` takes `name` and `description`. The description is the whole persona. There is no delete tool, so create only for a real job.
+1. `CreateAgent` takes `name` and `description`. The name is `Name - Role`. The description is the whole persona, including the shared corrections log path and the correct-once steps. There is no delete tool, so create only for a real job that passed the split test.
 2. Read `/home/box/agent-data/agents/<id>/profile.json` back. Don't trust the tool's acknowledgment alone.
 3. Send the new bot one realistic test message and check that the reply matches the job and the voice. Fix the description if it doesn't.
 4. If the job needs a routine, you can't create another bot's routines. Use `SendToAgent` to tell the new bot to call `update_state` (target `routine`, action `create`) with the exact name, prompt, and schedule or trigger. If that fails, give the user the one-line instruction to paste into the new bot.
@@ -76,6 +103,9 @@ Scouts, shopkeepers, life admin, dispatchers, writers. In the description: the j
 - A read-back and a live test message before telling the user it's done.
 - The routine hand-off with a paste-able fallback.
 - A test-and-keep loop with a fixed probe set per bot, pass or fail scoring, real friction as a new probe, and a TRY then KEEP rule for lessons.
+- A split test that turns a two-job sentence, or a step with its own send or spend approvals, into two bots.
+- A short org-fit check: chief of staff, heads and doers; about 5 to 8 bots the user talks to; `Name - Role`; a report asked three times becomes a daily routine.
+- A correct-once rule: a correction updates the instructions and the SOP, writes one dated line to a shared log other bots can read, and tells the user which SOP changed.
 
 ## Test-and-keep (before create, and on every persona rewrite)
 
