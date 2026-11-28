@@ -30,7 +30,7 @@ Install guides and skill pages: [botkits.dev](https://botkits.dev)
   <img src="assets/demo.gif" alt="Terminal demo: npx skills add botkitsdev/botkits, then a bot loads botkits-no-ai-slop/SKILL.md when the task matches." width="800">
 </p>
 
-[Top 3](#top-3) · [Quick start](#quick-start) · [Use it in](#use-it-in) · [Start here](#start-here) · [All 36 skills](#all-skills) · [Renamed skills](#renamed-skills) · [How a skill is used](#how-a-skill-is-used) · [Tool requirements](#tool-requirements) · [Premium](#premium) · [Contribute](#contribute) · [Inspired by](#inspired-by) · [License](#license)
+[Top 3](#top-3) · [Quick start](#quick-start) · [Use it in](#use-it-in) · [Start here](#start-here) · [All 36 skills](#all-skills) · [Bots](#bots) · [Renamed skills](#renamed-skills) · [How a skill is used](#how-a-skill-is-used) · [Tool requirements](#tool-requirements) · [Premium](#premium) · [Contribute](#contribute) · [Inspired by](#inspired-by) · [License](#license)
 
 ## Top 3
 
@@ -80,7 +80,7 @@ Free skills I use daily to run my 3 YouTube channels. My bots run on Grok Bot. T
 
 Made by Dani Acosta. Follow on X: [@DaniAcostaAI](https://x.com/DaniAcostaAI)
 
-36 skills for writing, design, code, MCP servers, SEO, ads, YouTube research, video, images, and bot routines. Give your bot a clear process for the job you need done.
+36 skills and 1 bot pack, for writing, design, code, MCP servers, SEO, ads, YouTube research, video, images, and bot routines. Give your bot a clear process for the job you need done.
 
 Every skill is Dani's own version, inspired by several public references rather than copied from one. Each is a single readable `SKILL.md`. The rewritten skills end with what inspired them, what those references were missing, and what this version adds.
 
@@ -114,6 +114,7 @@ Some bot and engineering skills use Grok Bot tools. As written, they need Grok B
 | Remove AI filler from a draft | [botkits-no-ai-slop](skills/writing/botkits-no-ai-slop/) |
 | Improve a website's design | [botkits-redesign-existing-projects](skills/design/botkits-redesign-existing-projects/) |
 | Create a bot with one clear job | [botkits-design-a-grok-bot](skills/bots/botkits-design-a-grok-bot/) |
+| Set up a bot that reviews agent tools, event wakes and skill upgrades | [botkits-agent-tooling-coach](bots/botkits-agent-tooling-coach/) |
 | Find noisy or wasteful routines | [botkits-routine-healthcheck](skills/bots/botkits-routine-healthcheck/) |
 | Write a post for X or LinkedIn | [botkits-social-copywriting](skills/writing/botkits-social-copywriting/) |
 | Write a storytelling hook | [botkits-storytelling-hooks](skills/writing/botkits-storytelling-hooks/) |
@@ -241,6 +242,14 @@ updates. Show the evidence. Propose changes before applying them.
 | [botkits-chatgpt-images-browser-playbook](skills/images/botkits-chatgpt-images-browser-playbook/) | Generate still images through a signed-in ChatGPT browser session. |
 | [botkits-scene-detail-board](skills/images/botkits-scene-detail-board/) | Pair a photo with a grid of hand sketches of its details, in one portrait image. |
 
+## Bots
+
+A bot is a pack: a persona, the skills it uses, optional routines, and a short getting-started chat. Load [PACK.md](bots/botkits-agent-tooling-coach/PACK.md), then install the skills it lists. The format is in [AGENTS.md](AGENTS.md#bot-packs).
+
+| Bot | What it does |
+| --- | --- |
+| [botkits-agent-tooling-coach](bots/botkits-agent-tooling-coach/) | Review an agent's tools, plan how it wakes on events, and check a skill or model change before it goes live. It does not turn anything on. |
+
 ## Renamed skills
 
 On 18 Nov 2026 every skill got the `botkits-` prefix, so our skills do not overwrite other skills with the same name. The old folders now hold only a README that points to the new folder. Old `--skill` commands no longer install anything, so use the new name.
@@ -324,7 +333,7 @@ Every skill above is free and complete. A Premium kit is the tested, ready-to-ru
 
 Found a useful improvement? Open an [issue](https://github.com/botkitsdev/botkits/issues) or a pull request.
 
-Keep each skill focused on one job. Use `skills/<category>/<slug>/SKILL.md` with `name` and `description` in YAML frontmatter. Include an example task and any tool requirements in your pull request. Add new skills to the list above. Preserve source credits and license notices.
+Keep each skill focused on one job. Use `skills/<category>/<slug>/SKILL.md` with `name` and `description` in YAML frontmatter. Include an example task and any tool requirements in your pull request. Add new skills to the list above. New skills also belong in a bot pack (`bots/<slug>/PACK.md`). Prefer an existing pack whose job already covers the skill. If you add a pack, add it to the [bot list](#bots). Preserve source credits and license notices.
 
 ## Inspired by
 
