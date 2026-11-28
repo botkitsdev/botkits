@@ -1,0 +1,75 @@
+{
+  "caveat": "RPM is what the creator earns per 1,000 views after YouTube's share. These are medians from one agency's client channels (10k to 50M subscribers, mixed audiences). A channel's own audience country, ad load and share of monetised views move RPM a lot. Use the band to rank niches and size an order of magnitude, never to promise income. Kids content marked made for kids earns far less because it cannot use personalised ads.",
+  "shorts_rpm_range": [
+    0.07,
+    0.2
+  ],
+  "niches": {
+    "education": {
+      "median": 10.22,
+      "p25": 2.31,
+      "p75": 19.5
+    },
+    "transport": {
+      "median": 5.69,
+      "p25": 3.17,
+      "p75": 9.81
+    },
+    "lifestyle": {
+      "median": 2.98,
+      "p25": 1.77,
+      "p75": 5.24
+    },
+    "news": {
+      "median": 2.6,
+      "p25": 1.79,
+      "p75": 3.62
+    },
+    "entertainment": {
+      "median": 2.43,
+      "p25": 0.88,
+      "p75": 5.02
+    },
+    "crafting": {
+      "median": 2.39,
+      "p25": 1.0,
+      "p75": 3.9
+    },
+    "tech": {
+      "median": 2.33,
+      "p25": 0.7,
+      "p75": 3.71
+    },
+    "music": {
+      "median": 2.28,
+      "p25": 1.35,
+      "p75": 4.16
+    },
+    "food": {
+      "median": 2.25,
+      "p25": 1.5,
+      "p75": 3.11
+    },
+    "gaming": {
+      "median": 2.05,
+      "p25": 0.7,
+      "p75": 3.62
+    },
+    "business": {
+      "median": 2.01,
+      "p25": 0.73,
+      "p75": 5.17
+    },
+    "health": {
+      "median": 1.23,
+      "p25": 0.72,
+      "p75": 1.53
+    },
+    "kids": {
+      "median": 0.33,
+      "p25": 0.16,
+      "p75": 0.88
+    }
+  },
+  "source": "ReachMath, YouTube RPM by Niche and Month (published 14 Nov 2026), built on AIR Media-Tech data from 300 channels, May 2025 to May 2026 (long-form). Shorts range from the same page. https://reachmath.com/data/youtube-rpm-by-niche/ . Niches with fewer than 10 channels in that sample are rough: transport, news, food, business."
+}
